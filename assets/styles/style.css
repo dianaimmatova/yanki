@@ -3,7 +3,7 @@ body * {
 }
 
 body {
-    background-color: var(--background-color);
+    background-color: #000;
 }
 
 .container {
@@ -20,13 +20,14 @@ body {
     top: 24px;
 }
 .header__container{
-    background: #000;
     display: flex;
     align-items: center;  
     justify-content: space-between;
 }
-.header__animation-menu {
+.burger__menu {
     display: flex;
+    align-items: center;
+    max-width: 1160px;
 }
 .burger__btn {
     position: relative;
@@ -34,7 +35,7 @@ body {
     height: 24px;
 }
 .burger__btn::before {
-    content: "";
+    content: '';
     position: absolute;
     display: inline-block;
     left: 0;
@@ -48,8 +49,8 @@ body {
     position: absolute;
     display: inline-block;
     left: 0;
-    right: 0;
     top: 0;
+    right: 0;
     bottom: 0;
     margin: auto;
     width: 34px;
@@ -58,7 +59,7 @@ body {
     transition: .3s;
 }
 .burger__btn::after {
-    content: "";
+    content: '';
     position: absolute;
     display: inline-block;
     left: 0;
@@ -66,20 +67,39 @@ body {
     width: 34px;
     height: 4px;
     background-color: var(--background-color);
-    transition: 0.3s;
+    transition: .3s;
 }
 #burger:checked + .burger__btn > .line {
     width: 0;
 }
-#burger:checked + .burger__btn::before{
+#burger:checked + .burger__btn::before {
     transform: rotate(45deg);
-    /* top: 1px; */
+    top: 10px;
 }
 #burger:checked + .burger__btn::after {
-    transform: rotate(-45deg);
-    /* bottom: 1px; */
+    transform:rotate(-45deg);
+    bottom: 10px;
 }
-.header__menu {
+.burger__menu-nav {
+    overflow: hidden;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    height: 0;
+    width: 100vw;
+    background-color: #949494;  
+    transition: 1s;
+}
+#burger:checked ~ .burger__menu-nav {
+    height: 85px;
+}
+.burger__menu-list {
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.header__list {
     display: flex;
     column-gap: 26px;
 }
