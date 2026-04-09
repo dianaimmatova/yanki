@@ -3,7 +3,7 @@ body * {
 }
 
 body {
-    background-color: #000;
+    background-color: var(--background-color);
 }
 
 .container {
@@ -69,3 +69,64 @@ body {
     display: flex;
     column-gap: 30px;
 }
+
+/* HERO */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: relative;
+}
+.hero > img {
+    position: relative;
+    z-index: -9999;
+    width: 100%;
+    min-height: 100vh;
+    object-fit: cover;
+    object-position: center;
+}
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+}
+.hero__title {
+    font-weight: 300;
+    font-size: 46px;
+    text-align: center;
+    color: var(--background-color);
+}
+.hero__line {
+    width: 120px;
+    height: 1px;
+    background: var(--background-color);
+    margin: 20px 0;
+}
+.hero__link {
+    font-weight: 300;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--background-color);
+    position: relative;
+}
+.hero__link > svg {
+    position: absolute;
+    top: -2px;
+    fill: var(--background-color);
+}
+.hero__link:hover {
+    opacity: 0.7;
+}
+.hero__link:hover > svg {
+    fill: var(--primary-color);
+    transition: .3s;
+}
+/* HERO */
+
+
+
