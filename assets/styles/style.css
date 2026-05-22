@@ -3,6 +3,7 @@ body * {
 }
 
 body {
+    background-color: #000;
     background-color: var(--background-color);
 }
 
@@ -11,7 +12,6 @@ body {
     margin: 0 auto;
     padding: 0 10px;
 }
-
 
 /* HEADER */
 .header {
@@ -127,6 +127,4 @@ body {
     transition: .3s;
 }
 /* HERO */
-
-
 
