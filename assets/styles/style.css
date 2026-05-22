@@ -4,6 +4,7 @@ body * {
 
 body {
     background-color: #000;
+    background-color: var(--background-color);
 }
 
 .container {
@@ -11,7 +12,6 @@ body {
     margin: 0 auto;
     padding: 0 10px;
 }
-
 
 /* HEADER */
 .header {
@@ -69,3 +69,4 @@ body {
     display: flex;
     column-gap: 30px;
 }
+
